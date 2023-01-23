@@ -1,14 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-locations-details',
-  templateUrl: './locations-details.component.html',
-  styleUrls: ['./locations-details.component.scss'],
+  selector: 'app-location-detail',
+  templateUrl: './location-detail.component.html',
+  styleUrls: ['./location-detail.component.scss'],
 })
-export class LocationsDetailsComponent implements OnInit {
+export class LocationDetailComponent implements OnInit {
+  @Input() location: any;
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.location);
+  }
+
+  async close(){
+    await this.modalCtrl.dismiss();
+  }
 
 }
