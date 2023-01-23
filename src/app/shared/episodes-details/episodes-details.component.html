@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-label>DETALLE DEL LA LOCACION</ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="episodedetail">
+  <ion-grid>
+    <ion-row>
+     <!--  <ion-col class="logo">
+        <ion-img [src]="character.image" style="width:40%"></ion-img>
+      </ion-col> -->
+    </ion-row>
+      <ion-col>
+        <h3><b>Nombre: </b> {{ episode.name }}</h3>
+        <h3><b>ID: </b> {{ episode.id}}</h3>
+        <h3><b>Fecha de emision: </b> {{ episode.air_date }}</h3>
+        <h3><b>Codigo del episodio: </b> {{ episode.episode}}</h3>
+        <h3><b>Link de personajes vistos en ese episodio: </b> {{ episode.characters}}</h3>
+      </ion-col>
+    <ion-row>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
